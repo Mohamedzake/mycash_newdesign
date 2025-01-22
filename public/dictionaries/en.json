@@ -1,0 +1,205 @@
+{
+  "navbar": {
+    "start_now": "Start now",
+    "arabic": "العربية",
+    "english": "English",
+    "contact_us": "Contact us",
+    "articles": "Blogs",
+    "packages": "Packes",
+    "solutions": "Solutions",
+    "about_us": "About us",
+    "main_page": "Home",
+    "login": "login"
+  },
+  "mainpage": {
+    "main_title1": " نظامك الشامل لإدارة المبيعات باحترافية، وتنظيم المدفوعات بدقة، وتعزيز أعمالك بحلول الذكاء الاصطناعي المتقدمة",
+    "main_title2": "اكتشف تجربة مبتكرة مع ماي كاش",
+    "main_title": "An all-in-one solution for managing your sales ",
+    "main_subtitle": " Efficiently, Seamlessly, Systematically.",
+    "description_title": "My Cash system was designed to optimize sales and payments management, streamlining these processes with professional standards and expertise.",
+    "know_more": "Learn more",
+    "get_trial": "Start your fre trial"
+  },
+  "solutions": {
+    "discover_our_solutions": "Discover our solutions",
+    "control_your_payment": "Control your store payments easily with My Cash Solutions.",
+    "pos_solutions": "POS Solutions",
+    "sales_solutions_desc": "We offer a simple and efficient solution for completing sales transactions with a smart POS system. Our POS solutions combine security and speed to simplify the management of business transactions.",
+    "sales_solutions": "Sales Solutions",
+    "ai_solutions": "AI Solutions",
+    "ai_solutions_desc": "With My Cash AI, you can optimize sales and payments management, streamlining these processes with professional standards and expertise.",
+    "description_title": "We offer innovative solutions to optimize sales and payments management, streamlining these processes with professional standards and expertise.",
+    "pos_solutions_desc": "We offer a simple and efficient solution for completing sales transactions with a smart POS system. Our POS solutions combine security and speed to simplify the management of business transactions.",
+    "know_more": "Learn more",
+    "get_trial": "Start your fre trial"
+  },
+
+  "advancedSolutions": {
+    "title": "A New Vision For Managing Your Business",
+    "subtitle": "Advanced AI Solutions",
+    "description": " Make your business intelligent with advanced AI solutions, and be ready for the future of digital business.",
+
+    "attend_leave_title": "The Attendance and Leave System:",
+    "attend_leave_description": "The system relies on accurate and secure employee attendance and leave tracking to improve employee engagement and provide real-time reports.",
+
+    "sell_over_cams_title": "Selling over Cameras",
+    "sell_over_cams_description": "An AI-powered solution that enables accurate product recognition and real-time sales tracking without the need for human intervention. This technology provides",
+
+    "number_of_clients_title": ":The Number of Clients System",
+    "number_of_clients_description": "The system provides accurate sales data, attendance data, and customer engagement data for specific days, which helps you plan better and increase profits",
+
+    "ages_gender_title": "Age and Gender Analysis",
+    "ages_gender_description": "The system provides a comprehensive analysis of age and gender groups, which allows you to tailor offers and services based on customer needs, and improve sales strategies."
+  },
+  "carousel": {
+    "title1": "إدارة شاملة وسهلة",
+    "title2": "إدارة المبيعات والمخزون",
+    "title3": "أنظمة دفع متكاملة",
+    "title4": "إمكانية الوصول للنظام من أى جهاز",
+    "title5": "تتبع المبيعات بسرعة وسهولة",
+    "title6": "خيارات دفع متعددة",
+
+    "pont1_1": "لوحة تحكم مبسطة مع رؤية دقيقة وتحليلات وتقارير متقدمة",
+    "pont1_2": "إمكانية إدارة العمليات بسلاسة، وتصنيف المنتجات حسب الحاجة",
+
+    "pont2_1": "عدد منتجات غير محدود",
+    "pont2_2": "نظام متابعة للمخزون والجرد والتالف",
+    "pont2_3": "إصدار عروض الأسعار وإدارة العملاء والموردين",
+
+    "pont3_1": "استقبال المدفوعات وتقسيمها بمرونة",
+    "pont3_2": "دعم نظام “ادفع لاحقًا” (تابي، تمارا)",
+    "pont3_3": "استقبال الطلبات عبر نظام ماي كاش في نظام واحد",
+
+    "pont4_1": "يمكنك الوصول إلى النظام من أي جهاز بكل سهولة سواء كنت تستخدم الهاتف، الكمبيوتر اللوحي أو الكمبيوتر الشخصي ",
+    "pont4_2": "يمكنك متابعة أعمالك وإدارة مبيعاتك ومخزونك في أي وقت ومن أي مكان",
+
+    "pont5_1": "تتبع مبيعاتك بسرعة وسهولة مع الحلول الذكية ",
+    "pont5_2": "احصل على تقرير دقيق لحظي حول أدائك التجاري",
+    "pont5_3": "تابع كل عملية بيع بكل سهولة وبدون تعقيد",
+
+    "pont6_1": "استمتع بخيارات دفع متعددة تناسب احتياجاتك، ",
+    "pont6_2": "اختر من بين عدة طرق دفع مريحة وآمنة",
+    "pont6_3": "مما يسهل على عملائك إتمام معاملاتهم بسهولة وسرعة",
+    "desc1": "المميزات الحصرية لنظام ماي كاش ",
+    "special_features": "Exclusive features",
+    "title": "Exclusive features of MyCash system",
+    "subtitle": "Artificial Intelligence and Smart Payment Solutions",
+    "slide_title": "Smart management of the future::",
+    "first_point": "AI-based system that provides accurate and real-time analytics",
+    "second_point": "of sales, customers, and market behaviors. Full integration",
+    "get_trial": "Start your free trail"
+  },
+  "agreements": {
+    "heading": "توقيع اتفاقيات لتعزز الابتكار ودعم التحول الرقمي",
+    "title1": "تم توقيع اتفاقية تعاون مع البنك الاهلى السعودى لتعزيز الخدمات المالية وتقديم حلول تم توقيع اتفاقية تعاون مع البنك الاهلى السعودى لتعزيز الخدمات المالية وتقديم حلول دفع مبتكرة.",
+    "title2": "تم توقيع اتفاقية تعاون مع paymob لتسهيل عمليات الدفع للشركات في جميع أنحاء المملكة العربية السعودية"
+  },
+  "aboutus": {
+    "special_features": "Exclusive features",
+    "title": "Enhance your product with MyCash features",
+    "subtitle": "Enhance your business with the power of AI and smart payment solutions.",
+    "des_title1": "Access the system from any device",
+    "des_subtitle1": "You can access the system from any device with ease, whether you use a phone, a laptop, or a personal computer. You can track your work and manage your sales and inventory in any time and place.",
+    "des_title2": "Fast and easy sales tracking",
+    "des_subtitle2": "Track your sales efficiently and easily with the intelligent solutions and get a detailed report of your business activities, and track all sales transactions with ease and without any commitment.",
+    "des_title3": "خيارات دفع متعددة",
+    "des_subtitle3": "استمتع بخيارات دفع متعددة تناسب احتياجاتك، اختر من بين عدة طرق دفع مريحة وآمنة، مما يسهل على عملائك إتمام معاملاتهم بسهولة وسرعة.",
+    "get_trial": "أحصل على نسختك التجريبية"
+  },
+  "mycashai": {
+    "title": "MyCash AI",
+    "description_title_l1": "MyCash System is a comprehensive AI-based system that provides",
+    "description_title_l2": "a range of features to optimize sales and payments management, streamlining these processes with professional standards and expertise.",
+    "description_title_l3": "Optimize sales and payments management, streamlining these processes with professional standards and expertise",
+    "description_title_l4": "MyCash System is a comprehensive AI-based system that provides a range of features to optimize sales and payments management, streamlining these processes with professional standards and expertise.",
+    "point1": "MyCash System is a comprehensive AI-based system that provides a range of features to optimize sales and payments management, streamlining these processes with professional standards and expertise.",
+    "point2": "The system provides accurate sales data, attendance data, and customer engagement data for specific days, which helps you plan better and increase profits",
+    "point3": "The system provides a comprehensive analysis of age and gender groups, which allows you to tailor offers and services based on customer needs, and improve sales strategies.",
+    "get_trial": "Start your free trail",
+    "learn_more": "Learn more"
+  },
+  "promosection": {
+    "promoHeading": "Get you Perfect Experience with MyCash",
+    "promo_description": "Discover a seamless and personalized experience with all the tools you need for a hassle-free life. Whether you're at home or abroad, MyCash keeps you connected and in control at any time and place.",
+    "cta_text": "Download from Google Play"
+  },
+  "promotion": {
+    "main_title": "Get you Perfect Experience with MyCash",
+    "sub_title": "Discover a seamless and personalized experience with all the tools you need for a hassle-free life. Whether you're at home or abroad, MyCash keeps you connected and in control at any time and place."
+  },
+  "contact": {
+    "contact_title": "Get In Touch With Us And Start Your Bussiness",
+    "contact_description": "Don't hesitate to get in touch with us and start your business with MyCash.",
+    "get_in_touch": "Get In Touch"
+  },
+  "footer": {
+    "footer_title": "MyCash System is Designed for enhancing payments and sales management with professional standards and expertise",
+    "mycash": "MyCash",
+    "about_us": "About Us",
+    "our_vision_mission": "Our Vision and Mission",
+    "our_partners": "Our Partners",
+    "packages": "Packages",
+    "contact_us": "Contact Us",
+    "solutions": "Solutions",
+    "pos_solutions": "POS Solutions",
+    "payments_solutions": "Payments Solutions",
+    "mycash_ai": "MyCash AI",
+    "download_app": "Download App"
+  },
+  "landing": {
+    "header_title": "احصل اليوم على تطبيق ماي كاش: الحل الذكي لإدارة المبيعات والمدفعوات بكل سهولة",
+    "first_name": "First Name",
+    "second_name": "Second Name",
+    "email": "Email",
+    "phone_num": "Phone Number",
+    "company_name": "Company Name",
+    "branch_numbers": "How many branches ? ",
+    "send": "Send"
+  },
+  "whymycash": {
+    "whymycash_title": "Why choose MyCash ?",
+    "whymycash_description": "MyCash System is a comprehensive AI-based system that provides a range of features to optimize sales and payments management, streamlining these processes with professional standards and expertise",
+    "selling_cams_title": "Selling over Cameras",
+    "selling_cams_content": "An AI-powered solution that enables accurate product recognition and real-time sales tracking without the need for human intervention. This technology provides",
+    "measure_clients_title": "Measure Clients",
+    "measure_clients_content": "The system provides accurate sales data, attendance data, and customer engagement data for specific days, which helps you plan better and increase profits",
+    "attend_leave_title": "The Attendance and Leave System:",
+    "attend_leave_content": "The system relies on accurate and secure employee attendance and leave tracking to improve employee engagement and provide real-time reports"
+  },
+  "whychoosemycash": {
+    "why_choose_mycash_title": "Why CHosse MyCash App ?",
+    "why_choose_mycash_description": "MyCash System is a comprehensive AI-based system that provides a range of features to optimize sales and payments management, streamlining these processes with professional standards and expertise.",
+    "fast_ui_title": "Fast and Easy User Interface",
+    "fast_ui_description": "The user interface is simple and easy to use, making it easy to navigate and manage your business transactions. ",
+    "data_safe_title": "Highly Secure Data",
+    "data_safe_description": "The system provides accurate sales data, attendance data, and customer engagement data for specific days, which helps you plan better and increase profits",
+    "full_integration_title": "Full Integration",
+    "full_integration_description": "The system provides accurate sales data, attendance data, and customer engagement data for specific days, which helps you plan better and increase profits",
+    "manage_sales_title": "Manage Sales Easily",
+    "manage_sales_description": " The system provides accurate sales data, attendance data, and customer engagement data for specific days, which helps you plan better and increase profits",
+    "payment_integration_title": "Payment Integration",
+    "payment_integration_description": "The system provides accurate sales data, attendance data, and customer engagement data for specific days, which helps you plan better and increase profits",
+    "reports_title": "Reports and accurate data",
+    "reports_description": "The system provides accurate sales data, attendance data, and customer engagement data for specific days, which helps you plan better and increase profits",
+    "continues_updates_title": "Continues Updates",
+    "continues_updates_description": "The system provides accurate sales data, attendance data, and customer engagement data for specific days, which helps you plan better and increase profits",
+    "safe_time_title": "Safe Time",
+    "safe_time_description": "The system provides accurate sales data, attendance data, and customer engagement data for specific days, which helps you plan better and increase profits"
+  },
+  "package": {
+    "title": "MyCash Packages",
+    "subtitle": "Choose the best package for your business and start your business with MyCash",
+    "start_now": "Start Now"
+  },
+  "contactus": {
+    "contact_us": "Contact Us",
+    "subtitle": "MyCash System is a comprehensive AI-based system that provides a range of features to optimize sales and payments management, streamlining these processes with professional standards and expertise",
+    "start_now": "Start Now",
+    "email": "Email",
+    "email_input": "Enter your email",
+    "your_name": "Enter your name",
+    "phone": "Phone",
+    "message": "Enter your phone number",
+    "message_input": "Enter your phone number"
+  }
+}
