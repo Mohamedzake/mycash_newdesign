@@ -91,8 +91,9 @@ const ibmPlexSans = IBM_Plex_Sans({
 
 const LocaleContext = createContext({
   currentLocale: "ar",
-  // setLocale: (locale: string) => {},
-  setLocale: () => {},
+  setLocale: (locale: string) => {
+    console.log(locale);
+  },
 });
 
 export const useLocale = () => useContext(LocaleContext);
