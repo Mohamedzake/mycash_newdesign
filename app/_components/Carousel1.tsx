@@ -138,6 +138,152 @@
 
 ///-----------------
 ///------------
+// import React, { useEffect } from "react";
+// import { useTranslations } from "next-intl";
+// import { TripleHeadings } from "./TripleHeadings";
+// import Image from "next/image";
+// import gsap from "gsap";
+// import { Autoplay, Navigation } from "swiper/modules";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { useLocale } from "../layout";
+// import img1 from "@/public/Slider/img1.png";
+// import img2 from "@/public/Slider/img2.png";
+// import img3 from "@/public/Slider/img3.png";
+// import img4 from "@/public/Slider/img4.png";
+// import img5 from "@/public/Slider/img5.png";
+// import img6 from "@/public/Slider/img6.png";
+
+// const Carousel: React.FC = () => {
+//   const t = useTranslations("carousel");
+//   const { currentLocale } = useLocale();
+//   const carouselData = [
+//     {
+//       id: 1,
+//       img: img1,
+//       title: t("title1"),
+//       points: [t("pont1_1"), t("pont1_2")],
+//     },
+//     {
+//       id: 2,
+//       img: img2,
+//       title: t("title2"),
+//       points: [t("pont2_1"), t("pont2_2"), t("pont2_3")],
+//     },
+//     {
+//       id: 3,
+//       img: img3,
+//       title: t("title3"),
+//       points: [t("pont3_1"), t("pont3_2"), t("pont3_3")],
+//     },
+//     {
+//       id: 4,
+//       img: img4,
+//       title: t("title4"),
+//       points: [t("pont4_1")],
+//     },
+//     {
+//       id: 5,
+//       img: img5,
+//       title: t("title5"),
+//       points: [t("pont5_1"), t("pont5_2")],
+//     },
+//     {
+//       id: 6,
+//       img: img6,
+//       title: t("title6"),
+//       points: [t("pont6_1"), t("pont6_2")],
+//     },
+//   ];
+
+//   useEffect(() => {
+//     const slides = document.querySelectorAll(".swiper-slide");
+
+//     slides.forEach((slide) => {
+//       const img = slide.querySelector("img");
+//       const textContent = slide.querySelector(".text-content");
+//       gsap.set(img, {
+//         autoAlpha: currentLocale === "ar" ? "50" : "0",
+//         y: currentLocale === "ar" ? "0" : "50",
+//       });
+//       gsap.set(textContent, {
+//         autoAlpha: currentLocale === "ar" ? "50" : "0",
+//         y: currentLocale === "ar" ? "0" : "50",
+//       });
+//       // gsap.set(img, { autoAlpha: 50, y: 0 });
+//       // gsap.set(textContent, { autoAlpha: 50, y: 0 });
+//       // gsap.set(img, { autoAlpha: 0, y: 50 });
+//       // gsap.set(textContent, { autoAlpha: 0, y: 50 });
+//     });
+//   }, [currentLocale]);
+
+//   return (
+//     <section>
+//       <TripleHeadings
+//         title={t("special_features")}
+//         description={t("desc1")}
+//         subheading={t("subtitle")}
+//       />
+
+//       <Swiper
+//         navigation={false}
+//         centeredSlides={true}
+//         modules={[Autoplay, Navigation]}
+//         className="mySwiper"
+//         slidesPerView={"auto"}
+//         speed={2000}
+//         spaceBetween={20}
+//         autoplay={{
+//           delay: 4000,
+//           disableOnInteraction: false,
+//         }}
+//         onSlideChange={(swiper) => {
+//           const activeSlide = swiper.slides[swiper.activeIndex];
+//           const img = activeSlide.querySelector("img");
+//           const textContent = activeSlide.querySelector(".text-content");
+
+//           gsap.set(img, { autoAlpha: 0, y: 50 });
+//           gsap.set(textContent, { autoAlpha: 0, y: 50 });
+//           gsap.to(img, { autoAlpha: 1, y: 0, duration: 0.5 });
+//           gsap.to(textContent, { autoAlpha: 1, y: 0, duration: 0.5 });
+//         }}
+//       >
+//         {carouselData.map((item) => (
+//           <SwiperSlide key={item.id} className="bg-white">
+//             <section className="grid grid-cols-1 lg:grid-cols-4 mx-8 bg-white">
+//               <div className="text-content flex flex-col pl-10  pb-10 m-auto col-span-2">
+//                 <h2 className="text-xl sm:text-lg md:text-2xl lg:text-3xl font-bold text-primary-blue">
+//                   {item.title}
+//                 </h2>
+//                 <div
+//                   className={`w-full text-start pl-8 ${
+//                     item.id === 3 ? "leading-[1.5]" : "leading-[2.5]"
+//                   }`}
+//                 >
+//                   {item.points.map((point, index) => (
+//                     <p key={index} className="text-base lg:text-xl">
+//                       {point}
+//                     </p>
+//                   ))}
+//                 </div>
+//               </div>
+//               <div className="m-auto col-span-2">
+//                 <Image
+//                   src={item.img}
+//                   width={500}
+//                   height={600}
+//                   alt="image"
+//                   className="object-cover rounded-3xl transition-transform duration-500 ease-in-out"
+//                 />
+//               </div>
+//             </section>
+//           </SwiperSlide>
+//         ))}
+//       </Swiper>
+//     </section>
+//   );
+// };
+
+// export default Carousel;
 import React, { useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { TripleHeadings } from "./TripleHeadings";
@@ -156,6 +302,7 @@ import img6 from "@/public/Slider/img6.png";
 const Carousel: React.FC = () => {
   const t = useTranslations("carousel");
   const { currentLocale } = useLocale();
+
   const carouselData = [
     {
       id: 1,
@@ -202,19 +349,16 @@ const Carousel: React.FC = () => {
       const img = slide.querySelector("img");
       const textContent = slide.querySelector(".text-content");
 
-      gsap.set(img, {
-        autoAlpha: ` ${currentLocale === "ar" ? "50 , y: 0" : "0 , y: 50"}`,
-      });
-      gsap.set(textContent, {
-        autoAlpha: `  ${currentLocale === "ar" ? "50 , y: 0" : "0 , y: 50"}`,
-      });
-      // gsap.set(img, { autoAlpha: 50, y: 0 });
-      // gsap.set(textContent, { autoAlpha: 50, y: 0 });
+      gsap.set(img, { autoAlpha: 0, y: 50 });
+      gsap.set(textContent, { autoAlpha: 0, y: 50 });
+
+      gsap.to(img, { autoAlpha: 1, y: 0, duration: 0.5 });
+      gsap.to(textContent, { autoAlpha: 1, y: 0, duration: 0.5, delay: 0.2 });
     });
-  }, []);
+  }, [currentLocale]);
 
   return (
-    <section>
+    <section dir="ltr">
       <TripleHeadings
         title={t("special_features")}
         description={t("desc1")}
@@ -227,7 +371,7 @@ const Carousel: React.FC = () => {
         modules={[Autoplay, Navigation]}
         className="mySwiper"
         slidesPerView={"auto"}
-        speed={3000}
+        speed={2000}
         spaceBetween={20}
         autoplay={{
           delay: 4000,
@@ -240,14 +384,20 @@ const Carousel: React.FC = () => {
 
           gsap.set(img, { autoAlpha: 0, y: 50 });
           gsap.set(textContent, { autoAlpha: 0, y: 50 });
+
           gsap.to(img, { autoAlpha: 1, y: 0, duration: 0.5 });
-          gsap.to(textContent, { autoAlpha: 1, y: 0, duration: 0.5 });
+          gsap.to(textContent, {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.5,
+            delay: 0.2,
+          });
         }}
       >
         {carouselData.map((item) => (
           <SwiperSlide key={item.id} className="bg-white">
             <section className="grid grid-cols-1 lg:grid-cols-4 mx-8 bg-white">
-              <div className="text-content flex flex-col pl-10  pb-10 m-auto col-span-2">
+              <div className="text-content flex flex-col pl-10 pb-10 m-auto col-span-2">
                 <h2 className="text-xl sm:text-lg md:text-2xl lg:text-3xl font-bold text-primary-blue">
                   {item.title}
                 </h2>
