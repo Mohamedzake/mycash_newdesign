@@ -139,7 +139,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </Head>
         <body className={`${fontClass} text-sm ...`}>
           <IntlProvider locale={currentLocale || "ar"} messages={messages}>
-            {currentLocale ? children : <p>Loading...</p>}
+            {currentLocale ? children : ""}
           </IntlProvider>
         </body>
       </html>
