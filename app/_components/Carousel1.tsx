@@ -138,7 +138,7 @@
 
 ///-----------------
 ///------------
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { TripleHeadings } from "./TripleHeadings";
 import Image from "next/image";
