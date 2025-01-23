@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
@@ -98,36 +97,40 @@ const AnimatedSections = () => {
   }, []);
 
   const sections = [
-    { title: "Title 1", image: "/ai/age_gender.png",heading:t("attend_leave_title"),desc:t("attend_leave_description") },
-    { title: "Title 2", image: "/ai/attend_leave.png",heading:t("sell_over_cams_title"),desc:t("sell_over_cams_description") },
-    { title: "Title 3", image: "/ai/nums_of_visits.png",heading:t("number_of_clients_title"),desc:t("number_of_clients_description") },
-    { title: "Title 3", image: "/ai/selling_over_cams.png",heading:t("ages_gender_title"),desc:t("ages_gender_description") },
+    {
+      title: "Title 1",
+      image: "/ai/age_gender.png",
+      heading: t("attend_leave_title"),
+      desc: t("attend_leave_description"),
+    },
+    {
+      title: "Title 2",
+      image: "/ai/attend_leave.png",
+      heading: t("sell_over_cams_title"),
+      desc: t("sell_over_cams_description"),
+    },
+    {
+      title: "Title 3",
+      image: "/ai/nums_of_visits.png",
+      heading: t("number_of_clients_title"),
+      desc: t("number_of_clients_description"),
+    },
+    {
+      title: "Title 3",
+      image: "/ai/selling_over_cams.png",
+      heading: t("ages_gender_title"),
+      desc: t("ages_gender_description"),
+    },
   ];
 
-  // const translatedText = [{
-  //   heading:t("attend_leave_title"),
-  //   desc:t("attend_leave_description")
-  // },{
-  //   heading:t("sell_over_cams_title"),
-  //   desc:t("sell_over_cams_description")
-  // },{
-  //   heading:t("number_of_clients_title"),
-  //   desc:t("number_of_clients_description")
-  // },{
-  //   heading:t("ages_gender_title"),
-  //   desc:t("ages_gender_description")
-  // }]
   return (
-    <section
-      ref={containerRef}
-      className="relative h-screen overflow-hidden  "
-    >
-            <TripleHeadings
-              title={t("title")}
-              description={t("subtitle")}
-              subheading={t("description")}
-            />
-      
+    <section ref={containerRef} className="relative h-screen overflow-hidden  ">
+      <TripleHeadings
+        title={t("title")}
+        description={t("subtitle")}
+        subheading={t("description")}
+      />
+
       <div className="absolute  left-8 top-1/2  -translate-y-1/2 h-[60vh] w-[3px] hidden flex-col justify-between indicators z-50">
         {sections.map((_, index) => (
           <div
@@ -141,7 +144,7 @@ const AnimatedSections = () => {
           />
         ))}
       </div>
-      
+
       <div ref={wrapperRef} className="wrapper ">
         {sections.map((section, index) => (
           <div
@@ -152,10 +155,12 @@ const AnimatedSections = () => {
             className="point h-screen w-full  flex-col mt-[10rem] lg:mt-[20rem] items-center justify-center p-12 outline outline-1 outline-red-500"
           >
             <article className="flex-[0_0_60%] opacity-100 translate-y-0 text-center flex flex-col gap-2">
-                      <h3 className="text-primary-blue text-3xl font-semibold pb-8 ">{section.heading}</h3>
-                      <p className="text-xl pl-16 pb-[6rem]">{section.desc}</p>
+              <h3 className="text-primary-blue text-3xl font-semibold pb-8 ">
+                {section.heading}
+              </h3>
+              <p className="text-xl pl-16 pb-[6rem]">{section.desc}</p>
             </article>
-            
+
             <Image
               src={section.image}
               alt={section.title}
@@ -166,9 +171,6 @@ const AnimatedSections = () => {
           </div>
         ))}
       </div>
-
-
-
     </section>
   );
 };
