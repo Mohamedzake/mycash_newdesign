@@ -81,8 +81,10 @@
 // export default Brands;
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-
+import { useLocale } from "../layout";
 const SwipeableSlider: React.FC = () => {
+  const { currentLocale } = useLocale();
+
   const slides = [
     { src: "/brands/urpay.png", alt: "Urpay" },
     { src: "/brands/mada.png", alt: "Mada" },
@@ -129,10 +131,10 @@ const SwipeableSlider: React.FC = () => {
       <style jsx>{`
         @keyframes slide {
           0% {
-            transform: translateX(0);
+            transform: translateX(${currentLocale === "ar" ? "300%" : "0"});
           }
           100% {
-            transform: translateX(-300%);
+            transform: translateX(${currentLocale === "ar" ? "0" : "-300%"});
           }
         }
 
@@ -165,7 +167,7 @@ const SwipeableSlider: React.FC = () => {
               alt={slides[i % slides.length].alt}
               width={150}
               height={150}
-              className="object-contain bg-primary-10"
+              className="object-contain bg-primary-10 p-2"
               priority={i < visibleCount}
             />
           </div>
