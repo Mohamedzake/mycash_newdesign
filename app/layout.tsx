@@ -89,11 +89,14 @@ const ibmPlexSans = IBM_Plex_Sans({
   display: "swap",
 });
 
-const LocaleContext = createContext({
+interface LocaleContextType {
+  currentLocale: string | null;
+  setLocale: (locale: string) => void;
+}
+
+const LocaleContext = createContext<LocaleContextType>({
   currentLocale: "ar",
-  setLocale: (locale: string) => {
-    console.log(locale);
-  },
+  setLocale: () => {},
 });
 
 export const useLocale = () => useContext(LocaleContext);
@@ -102,18 +105,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   const [currentLocale, setLocale] = useState<string | null>(null);
 
   useEffect(() => {
-    const savedLocale = localStorage.getItem("locale") || "ar";
-    setLocale(savedLocale);
+    if (typeof window !== "undefined") {
+      const savedLocale = localStorage.getItem("locale") || "ar";
+      setLocale(savedLocale);
+    }
   }, []);
 
   const updateLocale = (locale: string) => {
     setLocale(locale);
     localStorage.setItem("locale", locale);
   };
-
-  if (!currentLocale) {
-    return null;
-  }
 
   const messages: Messages =
     currentLocale === "en"
@@ -126,9 +127,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <LocaleContext.Provider value={{ currentLocale, setLocale: updateLocale }}>
       <html
-        lang={currentLocale}
+        lang={currentLocale || "ar"}
         dir={currentLocale === "ar" ? "rtl" : "ltr"}
-        suppressHydrationWarning
+        suppressHydrationWarning={false}
       >
         <Head>
           <meta
@@ -136,11 +137,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             content="kkrd506y1ao3crgzgm7wxpi08nhfsv"
           />
         </Head>
-        <body
-          className={`${fontClass} text-sm antialiased bg-primary-10 text-primary-100 min-h-screen flex flex-col relative`}
-        >
-          <IntlProvider locale={currentLocale} messages={messages}>
-            {children}
+        <body className={`${fontClass} text-sm ...`}>
+          <IntlProvider locale={currentLocale || "ar"} messages={messages}>
+            {currentLocale ? children : <p>Loading...</p>}
           </IntlProvider>
         </body>
       </html>
