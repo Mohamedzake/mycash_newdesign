@@ -145,7 +145,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { useLocale } from "../layout";
 import img1 from "@/public/Slider/img1.png";
 import img2 from "@/public/Slider/img2.png";
 import img3 from "@/public/Slider/img3.png";
@@ -155,8 +155,7 @@ import img6 from "@/public/Slider/img6.png";
 
 const Carousel: React.FC = () => {
   const t = useTranslations("carousel");
-  // const swiperRef = useRef(null);
-
+  const { currentLocale } = useLocale();
   const carouselData = [
     {
       id: 1,
@@ -203,20 +202,14 @@ const Carousel: React.FC = () => {
       const img = slide.querySelector("img");
       const textContent = slide.querySelector(".text-content");
 
-      gsap.set(img, { autoAlpha: 0, y: 50 });
-      gsap.set(textContent, { autoAlpha: 0, y: 50 });
-
-      // const timeline = gsap.timeline({
-      //   paused: true,
-      //   onStart: () => {
-      //     gsap.to(img, { autoAlpha: 1, y: 0, duration: 0.5 });
-      //     gsap.to(textContent, { autoAlpha: 1, y: 0, duration: 0.5 });
-      //   },
-      //   onComplete: () => {
-      //     gsap.to(img, { autoAlpha: 0, y: -20, duration: 0.5 });
-      //     gsap.to(textContent, { autoAlpha: 0, y: -20, duration: 0.5 });
-      //   },
-      // });
+      gsap.set(img, {
+        autoAlpha: ` ${currentLocale === "ar" ? "50 , y: 0" : "0 , y: 50"}`,
+      });
+      gsap.set(textContent, {
+        autoAlpha: `  ${currentLocale === "ar" ? "50 , y: 0" : "0 , y: 50"}`,
+      });
+      // gsap.set(img, { autoAlpha: 50, y: 0 });
+      // gsap.set(textContent, { autoAlpha: 50, y: 0 });
     });
   }, []);
 
