@@ -498,11 +498,9 @@ const Carousel: React.FC = () => {
       const img = slide.querySelector("img");
       const textContent = slide.querySelector(".text-content");
 
-      // Initial state: opacity 0 and slight horizontal offset
       gsap.set(img, { autoAlpha: 0, x: -50 });
       gsap.set(textContent, { autoAlpha: 0, x: -50 });
 
-      // Animation: fade in and slide to the right
       gsap.to(img, { autoAlpha: 1, x: 0, duration: 0.5 });
       gsap.to(textContent, { autoAlpha: 1, x: 0, duration: 0.5, delay: 0.2 });
     });
@@ -528,24 +526,6 @@ const Carousel: React.FC = () => {
         autoplay={{
           delay: 4000,
           disableOnInteraction: false,
-        }}
-        onSlideChange={(swiper) => {
-          const activeSlide = swiper.slides[swiper.activeIndex];
-          const img = activeSlide.querySelector("img");
-          const textContent = activeSlide.querySelector(".text-content");
-
-          // Reset animation state
-          gsap.set(img, { autoAlpha: 0, x: -50 });
-          gsap.set(textContent, { autoAlpha: 0, x: -50 });
-
-          // Fade in and slide to the right
-          gsap.to(img, { autoAlpha: 1, x: 0, duration: 0.5 });
-          gsap.to(textContent, {
-            autoAlpha: 1,
-            x: 0,
-            duration: 0.5,
-            delay: 0.2,
-          });
         }}
       >
         {carouselData.map((item) => (
