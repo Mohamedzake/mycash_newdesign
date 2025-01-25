@@ -298,6 +298,7 @@ import img3 from "@/public/Slider/img3.png";
 import img4 from "@/public/Slider/img4.png";
 import img5 from "@/public/Slider/img5.png";
 import img6 from "@/public/Slider/img6.png";
+// import "swiper/css";
 
 const Carousel: React.FC = () => {
   const t = useTranslations("carousel");
@@ -367,6 +368,7 @@ const Carousel: React.FC = () => {
 
       <Swiper
         navigation={false}
+        loop={true}
         centeredSlides={true}
         modules={[Autoplay, Navigation]}
         className="mySwiper"
