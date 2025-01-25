@@ -516,11 +516,14 @@ const Carousel: React.FC = () => {
 
       <Swiper
         navigation={false}
+        // navigation={true}
         loop={true}
+        slidesPerView={1}
+        autoHeight={true}
         centeredSlides={true}
         modules={[Autoplay, Navigation]}
         className="mySwiper"
-        slidesPerView={"auto"}
+        // slidesPerView={"auto"}
         speed={2000}
         spaceBetween={20}
         autoplay={{
@@ -530,8 +533,17 @@ const Carousel: React.FC = () => {
       >
         {carouselData.map((item) => (
           <SwiperSlide key={item.id} className="bg-white">
-            <section className="grid grid-cols-1 lg:grid-cols-4 mx-8 bg-white">
-              <div className="text-content flex flex-col pl-10 pb-10 m-auto col-span-2">
+            <section className="grid grid-cols-1 lg:grid-cols-4 mx-8 bg-white h-[600px] lg:h-[260px]">
+              <div className="m-auto col-span-2 order-2 lg:order-1 ">
+                <Image
+                  src={item.img}
+                  width={500}
+                  height={600}
+                  alt="image"
+                  className="object-cover rounded-3xl transition-transform duration-500 ease-in-out"
+                />
+              </div>
+              <div className="text-content flex flex-col pl-10 pb-10 m-auto col-span-2 order-1 lg:order-2 ">
                 <h2 className="text-xl sm:text-lg md:text-2xl lg:text-3xl font-bold text-primary-blue">
                   {item.title}
                 </h2>
@@ -546,15 +558,6 @@ const Carousel: React.FC = () => {
                     </p>
                   ))}
                 </div>
-              </div>
-              <div className="m-auto col-span-2">
-                <Image
-                  src={item.img}
-                  width={500}
-                  height={600}
-                  alt="image"
-                  className="object-cover rounded-3xl transition-transform duration-500 ease-in-out"
-                />
               </div>
             </section>
           </SwiperSlide>
