@@ -240,7 +240,7 @@ import mycash_paymob from "@/public/agreement/mycash_paymob.png";
 
 interface SwiperItem {
   id: number;
-  rightImg: StaticImageData; // Type for Next.js images
+  rightImg: StaticImageData;
   leftImg: StaticImageData;
   title: string;
 }
@@ -248,7 +248,6 @@ interface SwiperItem {
 const Agreements: React.FC = () => {
   const t = useTranslations("agreements");
 
-  // Swiper data array
   const swiperData: SwiperItem[] = [
     {
       id: 1,
@@ -271,7 +270,6 @@ const Agreements: React.FC = () => {
       const swiperEl = swiperRef.current.querySelector(".swiper-slide-active");
 
       if (swiperEl) {
-        // GSAP animation logic
         const rightImg = swiperEl.querySelector(".right img");
         const leftImg = swiperEl.querySelector(".left img");
         const text = swiperEl.querySelector("p");
@@ -295,12 +293,10 @@ const Agreements: React.FC = () => {
 
   return (
     <section className="text-center mt-6">
-      {/* Heading */}
       <h1 className="text-lg font-bold md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl mb-10 py-4 px-2 lg:py-8 text-primary-blue">
         {t("heading")}
       </h1>
 
-      {/* Swiper Component */}
       <Swiper
         onSwiper={(swiper) => {
           swiperRef.current = swiper.el as HTMLDivElement;
@@ -319,7 +315,6 @@ const Agreements: React.FC = () => {
         {swiperData.map((item) => (
           <SwiperSlide key={item.id} className="bg-white">
             <div className="grid grid-cols-1 lg:grid-cols-2 mx-8 bg-white">
-              {/* Right Section */}
               <div className="flex flex-col">
                 <div className="right flex flex-col w-full justify-around items-center md:pr-8">
                   <Image
@@ -330,12 +325,12 @@ const Agreements: React.FC = () => {
                     className="w-3/4 md:w-1/2 lg:w-1/3"
                   />
                 </div>
-                {/* Text */}
+
                 <p className="text-base md:text-lg lg:text-xl font-semibold text-primary mt-4 text-center">
                   {item.title}
                 </p>
               </div>
-              {/* Left Section */}
+
               <div className="left w-full flex justify-center items-center">
                 <Image
                   src={item.leftImg}
