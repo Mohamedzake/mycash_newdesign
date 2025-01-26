@@ -237,7 +237,7 @@ import snb from "@/public/agreement/snb.png";
 import mycash_snb from "@/public/agreement/mycash_snb.png";
 import paymob from "@/public/agreement/Paymob.png";
 import mycash_paymob from "@/public/agreement/mycash_paymob.png";
-
+import { useLocale } from "../layout";
 interface SwiperItem {
   id: number;
   rightImg: StaticImageData;
@@ -247,7 +247,8 @@ interface SwiperItem {
 
 const Agreements: React.FC = () => {
   const t = useTranslations("agreements");
-
+  const { currentLocale } = useLocale();
+  const locale = currentLocale;
   const swiperData: SwiperItem[] = [
     {
       id: 1,
@@ -289,7 +290,7 @@ const Agreements: React.FC = () => {
         }
       }
     }
-  }, [swiperData]);
+  }, [swiperData, locale]);
 
   return (
     <section className="text-center mt-6">
@@ -301,6 +302,7 @@ const Agreements: React.FC = () => {
         onSwiper={(swiper) => {
           swiperRef.current = swiper.el as HTMLDivElement;
         }}
+        key={locale}
         navigation={true}
         modules={[Autoplay]}
         loop={true}
