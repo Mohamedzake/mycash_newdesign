@@ -841,8 +841,8 @@ const Agreements: React.FC = () => {
       >
         {swiperData.map((item) => (
           <SwiperSlide key={item.id} className="bg-white">
-            <section className="grid grid-cols-1 lg:grid-cols-4 mx-8 bg-white h-[600px] lg:h-[260px]">
-              <div className="m-auto col-span-2 order-2 lg:order-1 ">
+            <section className="grid grid-cols-1 lg:grid-cols-4 mx-4 md:mx-10 lg:mx-20 gap-0 lg:gap-20 bg-white h-[600px] lg:h-[260px]">
+              <div className="flex justify-center items-center col-span-2 order-2 lg:order-1 ">
                 <Image
                   src={item.img}
                   width={500}
@@ -851,17 +851,17 @@ const Agreements: React.FC = () => {
                   className="object-cover rounded-3xl transition-transform duration-500 ease-in-out"
                 />
               </div>
-              <div className="text-content flex flex-col pl-10 pb-10 m-auto col-span-2 order-1 lg:order-2 ">
-                <h2 className="text-xl sm:text-lg md:text-2xl lg:text-3xl font-bold text-primary-blue">
+              <div className="text-content flex flex-col  justify-center items-center  col-span-2 order-1 lg:order-2 ">
+                <h2 className="text-2xl lg:text-3xl font-bold text-primary-blue flex justify-center items-center">
                   {item.title}
                 </h2>
                 <div
-                  className={`w-full text-start pl-8 ${
+                  className={`w-full text-start p-2 flex flex-col justify-center items-center ${
                     item.id === 3 ? "leading-[1.5]" : "leading-[2.5]"
                   }`}
                 >
                   {item.points.map((point, index) => (
-                    <p key={index} className="text-base lg:text-xl">
+                    <p key={index} className="text-xl lg:text-xl">
                       {point}
                     </p>
                   ))}
