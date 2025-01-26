@@ -575,34 +575,62 @@ import { Autoplay } from "swiper/modules";
 import Image, { StaticImageData } from "next/image";
 import gsap from "gsap";
 import "swiper/css";
+import { TripleHeadings } from "./TripleHeadings";
+import img1 from "@/public/Slider/img1.png";
+import img2 from "@/public/Slider/img2.png";
+import img3 from "@/public/Slider/img3.png";
+import img4 from "@/public/Slider/img4.png";
+import img5 from "@/public/Slider/img5.png";
+import img6 from "@/public/Slider/img6.png";
 
-import snb from "@/public/agreement/snb.png";
-import mycash_snb from "@/public/agreement/mycash_snb.png";
-import paymob from "@/public/agreement/Paymob.png";
-import mycash_paymob from "@/public/agreement/mycash_paymob.png";
-
+type TranslatedPoints = string[];
 interface SwiperItem {
   id: number;
-  rightImg: StaticImageData;
-  leftImg: StaticImageData;
+
+  img: StaticImageData;
   title: string;
+  points: TranslatedPoints;
 }
 
 const Agreements: React.FC = () => {
-  const t = useTranslations("agreements");
+  const t = useTranslations("carousel");
 
   const swiperData: SwiperItem[] = [
     {
       id: 1,
-      rightImg: paymob,
-      leftImg: mycash_paymob,
+      img: img1,
       title: t("title1"),
+      points: [t("pont1_1"), t("pont1_2")],
     },
     {
       id: 2,
-      rightImg: snb,
-      leftImg: mycash_snb,
+      img: img2,
       title: t("title2"),
+      points: [t("pont2_1"), t("pont2_2"), t("pont2_3")],
+    },
+    {
+      id: 3,
+      img: img3,
+      title: t("title3"),
+      points: [t("pont3_1"), t("pont3_2"), t("pont3_3")],
+    },
+    {
+      id: 4,
+      img: img4,
+      title: t("title4"),
+      points: [t("pont4_1")],
+    },
+    {
+      id: 5,
+      img: img5,
+      title: t("title5"),
+      points: [t("pont5_1"), t("pont5_2")],
+    },
+    {
+      id: 6,
+      img: img6,
+      title: t("title6"),
+      points: [t("pont6_1"), t("pont6_2")],
     },
   ];
 
@@ -636,10 +664,11 @@ const Agreements: React.FC = () => {
 
   return (
     <section className="text-center mt-6">
-      <h1 className="text-lg font-bold md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl mb-10 py-4 px-2 lg:py-8 text-primary-blue">
-        {t("heading")}
-      </h1>
-
+      <TripleHeadings
+        title={t("special_features")}
+        description={t("desc1")}
+        subheading={t("subtitle")}
+      />
       <Swiper
         onSwiper={(swiper) => {
           swiperRef.current = swiper.el as HTMLDivElement;
@@ -657,33 +686,33 @@ const Agreements: React.FC = () => {
       >
         {swiperData.map((item) => (
           <SwiperSlide key={item.id} className="bg-white">
-            <div className="grid grid-cols-1 lg:grid-cols-2 mx-8 bg-white">
-              <div className="flex flex-col">
-                <div className="right flex flex-col w-full justify-around items-center md:pr-8">
-                  <Image
-                    src={item.rightImg}
-                    alt={item.title}
-                    width={200}
-                    height={200}
-                    className="w-3/4 md:w-1/2 lg:w-1/3"
-                  />
-                </div>
-
-                <p className="text-base md:text-lg lg:text-xl font-semibold text-primary mt-4 text-center">
-                  {item.title}
-                </p>
-              </div>
-
-              <div className="left w-full flex justify-center items-center">
+            <section className="grid grid-cols-1 lg:grid-cols-4 mx-8 bg-white h-[600px] lg:h-[260px]">
+              <div className="m-auto col-span-2 order-2 lg:order-1 ">
                 <Image
-                  src={item.leftImg}
-                  alt={item.title}
+                  src={item.img}
                   width={500}
-                  height={500}
-                  className="rounded-3xl shadow-lg"
+                  height={600}
+                  alt="image"
+                  className="object-cover rounded-3xl transition-transform duration-500 ease-in-out"
                 />
               </div>
-            </div>
+              <div className="text-content flex flex-col pl-10 pb-10 m-auto col-span-2 order-1 lg:order-2 ">
+                <h2 className="text-xl sm:text-lg md:text-2xl lg:text-3xl font-bold text-primary-blue">
+                  {item.title}
+                </h2>
+                <div
+                  className={`w-full text-start pl-8 ${
+                    item.id === 3 ? "leading-[1.5]" : "leading-[2.5]"
+                  }`}
+                >
+                  {item.points.map((point, index) => (
+                    <p key={index} className="text-base lg:text-xl">
+                      {point}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </section>
           </SwiperSlide>
         ))}
       </Swiper>
