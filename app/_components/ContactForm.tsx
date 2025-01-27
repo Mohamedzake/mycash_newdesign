@@ -1,43 +1,79 @@
 import React, { useState } from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { useTranslations } from "next-intl";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { createcontactUs } from "@/sendData";
+
 function ContactForm() {
   const t = useTranslations("contact");
+
   const [formData, setFormData] = useState({
-    fullName: "",
+    full_name: "",
     email: "",
-    companyName: "",
+    company_name: "",
     phone: "",
     message: "",
   });
+
+  const [errors, setErrors] = useState({
+    full_name: "",
+    email: "",
+    phone: "",
+  });
+
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { id, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [id]: value }));
+
+    if (errors[id as keyof typeof errors]) {
+      setErrors((prevErrors) => ({ ...prevErrors, [id]: "" }));
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {
+      full_name: formData.full_name ? "" : t("nameRequired"),
+      email: formData.email ? "" : t("emailRequired"),
+      phone: formData.phone ? "" : t("phoneRequired"),
+    };
+    setErrors(newErrors);
+
+    return !Object.values(newErrors).some((error) => error);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    console.log("Form data submitted:", formData);
+    if (!validateForm()) {
+      toast.error(t("formValidationError"));
+      return;
+    }
+
+    setLoading(true);
 
     try {
       await createcontactUs(formData);
+
       setFormData({
-        fullName: "",
+        full_name: "",
         email: "",
-        companyName: "",
+        company_name: "",
         phone: "",
         message: "",
       });
-      // alert("Form submitted successfully!");
+
+      toast.success(t("formSubmittedSuccess"));
     } catch (error) {
       console.error("Error submitting form:", error);
-      // alert("There was an error submitting the form.");
+      toast.error(t("formSubmitError"));
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -47,18 +83,26 @@ function ContactForm() {
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="flex flex-col">
-              <label htmlFor="fullName" className="text-right font-medium mb-2">
+              <label
+                htmlFor="full_name"
+                className="text-right font-medium mb-2"
+              >
                 {t("name")}
               </label>
               <input
                 dir="rtl"
                 type="text"
-                id="fullName"
-                value={formData.fullName}
+                id="full_name"
+                value={formData.full_name}
                 onChange={handleChange}
                 placeholder={t("name")}
-                className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className={`p-3 border rounded-md focus:outline-none focus:ring-2 ${
+                  errors.full_name ? "border-red-500" : "border-gray-300"
+                }`}
               />
+              {errors.full_name && (
+                <p className="text-red-500 text-sm">{errors.full_name}</p>
+              )}
             </div>
             <div className="flex flex-col">
               <label htmlFor="email" className="text-right font-medium mb-2">
@@ -71,14 +115,19 @@ function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder={t("email")}
-                className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className={`p-3 border rounded-md focus:outline-none focus:ring-2 ${
+                  errors.email ? "border-red-500" : "border-gray-300"
+                }`}
               />
+              {errors.email && (
+                <p className="text-red-500 text-sm">{errors.email}</p>
+              )}
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="flex flex-col">
               <label
-                htmlFor="companyName"
+                htmlFor="company_name"
                 className="text-right font-medium mb-2"
               >
                 {t("companyName")}
@@ -86,11 +135,11 @@ function ContactForm() {
               <input
                 dir="rtl"
                 type="text"
-                id="companyName"
-                value={formData.companyName}
+                id="company_name"
+                value={formData.company_name}
                 onChange={handleChange}
                 placeholder={t("companyName")}
-                className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="p-3 border rounded-md focus:outline-none focus:ring-2 border-gray-300"
               />
             </div>
             <div className="flex flex-col">
@@ -104,8 +153,13 @@ function ContactForm() {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder={t("phone")}
-                className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className={`p-3 border rounded-md focus:outline-none focus:ring-2 ${
+                  errors.phone ? "border-red-500" : "border-gray-300"
+                }`}
               />
+              {errors.phone && (
+                <p className="text-red-500 text-sm">{errors.phone}</p>
+              )}
             </div>
           </div>
           <div className="flex flex-col">
@@ -118,15 +172,16 @@ function ContactForm() {
               value={formData.message}
               onChange={handleChange}
               placeholder={t("yourMessage")}
-              className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 h-32 resize-none"
+              className="p-3 border rounded-md focus:outline-none focus:ring-2 border-gray-300 h-32 resize-none"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full bg-primary-20 text-white py-3 rounded-full hover:bg-green-600 transition duration-200"
+            className="w-full bg-primary-30 text-white py-2 px-4 rounded-full hover:bg-blue-900"
+            disabled={loading}
           >
-            {t("submit")}
+            {loading ? t("submitting") : t("submit")}
           </button>
         </form>
       </div>
@@ -181,6 +236,7 @@ function ContactForm() {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 }

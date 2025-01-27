@@ -16,8 +16,7 @@ export async function createcompany(data1) {
 //---------------
 export async function createcontactUs(data1) {
   console.log(data1);
-  const BASE_URL2 =
-    "https://mycashback.mycashtest.com/api/companyRequest/contactUs";
+  const BASE_URL2 = "https://mycashback.mycashtest.com/api/contactUs";
 
   try {
     const response = await fetch(BASE_URL2, {

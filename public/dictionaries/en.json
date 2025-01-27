@@ -142,7 +142,14 @@
     "contactUs": "Contact Us Today at",
     "phoneNumber": "Phone Number",
     "address": "Address",
-    "addressDetails": "3273 Anas bin Malik, Al-Sahafa, 8369\nRiyadh - Saudi Arabia"
+    "addressDetails": "3273 Anas bin Malik, Al-Sahafa, 8369\nRiyadh - Saudi Arabia",
+    "nameRequired": "Name is required",
+    "emailRequired": "Email is required",
+    "phoneRequired": "Phone number is required",
+    "submitting": "Submitting...",
+    "formSubmitError": "There was an error submitting the form. Please try again.",
+    "formSubmittedSuccess": "Form submitted successfully!",
+    "formValidationError": "There was an error in the form validation. Please check your inputs."
   },
   "footer": {
     "footer_title": "MyCash System is Designed for enhancing payments and sales management with professional standards and expertise",
