@@ -3,7 +3,7 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  mode: 'jit',
+  mode: "jit",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,48 +11,63 @@ export default {
     // "./public//**/*.{js,ts,jsx,tsx,mdx,jpg,png,jpeg}",
   ],
   theme: {
-    fontFamily : {
-      cairo_new: ["Cairo"]
+    fontFamily: {
+      cairo_new: ["Cairo"],
     },
     extend: {
-      backgroundImage:{
-        "bg_lg": "url('/cashaicamswide.png')",
-        "bg_sm": "url('/mycashaismall.png')",
-        "mycash_large": "url('/cashaicamswide.png')",
-        "herobg": "url('/heronew.png')",
-        "solutions_bg": "url('/solutions_bg.png')",
+      backgroundImage: {
+        bg_lg: "url('/cashaicamswide.png')",
+        bg_sm: "url('/mycashaismall.png')",
+        mycash_large: "url('/cashaicamswide.png')",
+        herobg: "url('/heronew.png')",
+        solutions_bg: "url('/solutions_bg.png')",
       },
-      screens : {
-        "xxs": "320px",
-        "xs":"450px",
+      screens: {
+        xxs: "320px",
+        xs: "450px",
       },
 
-      lineHeight : {
-        "40": "100px"
+      lineHeight: {
+        "40": "100px",
       },
       spacing: {
         "85": "23rem",
         "105": "6.563rem",
         "90": "4.5rem",
-      },fontSize: {
+      },
+      fontSize: {
         "2.5xs": "0.783rem",
       },
       colors: {
-        green:"#6EC531",
+        green: "#6EC531",
         primary: {
+          "10": "#ffffff",
+          "20": "#6EC531",
+          "30": "#232773",
+          "50": "#E1E8EF",
+          "100": "#f3f0ff",
+          "200": "#f8f9fa",
+          "300": "#f8f9fa",
+          "400": "#ebfbee",
+          "500": "#5E82A6",
+          "600": "#4C6B8A",
+          "700": "#3C546C",
+          "800": "#2C3D4F",
+          "900": "#1B2631",
+          "950": "#141C24",
           blue: "#232773",
           green: "#6EC531",
           grey: {
-            brands:"#F9F9F9",
+            brands: "#F9F9F9",
             grey: "#393939",
             softgrey: "#f5f6ff",
-            carousel:"#F3F4F6",
+            carousel: "#F3F4F6",
             softer: "#fafafa",
             arrow: "#D9D9D9",
-            form:"#979797",
-            package:"#636363"
+            form: "#979797",
+            package: "#636363",
           },
-        
+
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
@@ -110,7 +125,7 @@ export default {
       },
 
       leading: {
-        "20": "780px"
+        "20": "780px",
       },
       borderRadius: {
         lg: "var(--radius)",

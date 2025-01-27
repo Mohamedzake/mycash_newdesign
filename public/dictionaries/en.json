@@ -52,42 +52,39 @@
     "ages_gender_description": "The system provides a comprehensive analysis of age and gender groups, which allows you to tailor offers and services based on customer needs, and improve sales strategies."
   },
   "carousel": {
-    "title1": "إدارة شاملة وسهلة",
-    "title2": "إدارة المبيعات والمخزون",
-    "title3": "أنظمة دفع متكاملة",
-    "title4": "إمكانية الوصول للنظام من أى جهاز",
-    "title5": "تتبع المبيعات بسرعة وسهولة",
-    "title6": "خيارات دفع متعددة",
-
-    "pont1_1": "لوحة تحكم مبسطة مع رؤية دقيقة وتحليلات وتقارير متقدمة",
-    "pont1_2": "إمكانية إدارة العمليات بسلاسة، وتصنيف المنتجات حسب الحاجة",
-
-    "pont2_1": "عدد منتجات غير محدود",
-    "pont2_2": "نظام متابعة للمخزون والجرد والتالف",
-    "pont2_3": "إصدار عروض الأسعار وإدارة العملاء والموردين",
-
-    "pont3_1": "استقبال المدفوعات وتقسيمها بمرونة",
-    "pont3_2": "دعم نظام “ادفع لاحقًا” (تابي، تمارا)",
-    "pont3_3": "استقبال الطلبات عبر نظام ماي كاش في نظام واحد",
-
-    "pont4_1": "يمكنك الوصول إلى النظام من أي جهاز بكل سهولة سواء كنت تستخدم الهاتف، الكمبيوتر اللوحي أو الكمبيوتر الشخصي ",
-    "pont4_2": "يمكنك متابعة أعمالك وإدارة مبيعاتك ومخزونك في أي وقت ومن أي مكان",
-
-    "pont5_1": "تتبع مبيعاتك بسرعة وسهولة مع الحلول الذكية ",
-    "pont5_2": "احصل على تقرير دقيق لحظي حول أدائك التجاري",
-    "pont5_3": "تابع كل عملية بيع بكل سهولة وبدون تعقيد",
-
-    "pont6_1": "استمتع بخيارات دفع متعددة تناسب احتياجاتك، ",
-    "pont6_2": "اختر من بين عدة طرق دفع مريحة وآمنة",
-    "pont6_3": "مما يسهل على عملائك إتمام معاملاتهم بسهولة وسرعة",
-    "desc1": "المميزات الحصرية لنظام ماي كاش ",
-    "special_features": "Exclusive features",
-    "title": "Exclusive features of MyCash system",
+    "special_features": "Exclusive Features",
+    "desc1": "The exclusive features of My Cash system",
     "subtitle": "Artificial Intelligence and Smart Payment Solutions",
-    "slide_title": "Smart management of the future::",
-    "first_point": "AI-based system that provides accurate and real-time analytics",
-    "second_point": "of sales, customers, and market behaviors. Full integration",
-    "get_trial": "Start your free trail"
+    "title1": "Comprehensive and Easy Management",
+    "title2": "Sales and Inventory Management",
+    "title3": "Integrated Payment Systems",
+    "title4": "Accessibility Across Devices",
+    "title5": "Quick and Easy Sales Tracking",
+    "title6": "Multiple Payment Options",
+
+    "pont1_1": "Simplified Dashboard",
+    "pont1_2": "Seamless Operations Management",
+    "pont1_3": "Smart Integration with Systems",
+
+    "pont2_1": "Inventory Tracking System",
+    "pont2_2": "Quotation Issuance",
+    "pont2_3": "Integration Between Sales and Inventory",
+
+    "pont3_1": "Comprehensive Connection to Payment Platforms",
+    "pont3_2": "Support for 'Buy Now, Pay Later' Systems (Tabby, Tamara)",
+    "pont3_3": "Unified Order Management System",
+
+    "pont4_1": "Multi-Device Support",
+    "pont4_2": "Remote Business Management",
+    "pont4_3": "Interface Compatible with All Systems",
+
+    "pont5_1": "Easy Operations Tracking",
+    "pont5_2": "Fast Search and Simple Interface",
+    "pont5_3": "Accurate Business Performance Reports",
+
+    "pont6_1": "Multiple Payment Options to Suit Your Needs",
+    "pont6_2": "Integration with Modern Payment Systems",
+    "pont6_3": "Detailed Payment Reports"
   },
   "agreements": {
     "heading": "توقيع اتفاقيات لتعزز الابتكار ودعم التحول الرقمي",
@@ -130,7 +127,22 @@
   "contact": {
     "contact_title": "Get In Touch With Us And Start Your Bussiness",
     "contact_description": "Don't hesitate to get in touch with us and start your business with MyCash.",
-    "get_in_touch": "Get In Touch"
+    "get_in_touch": "Get In Touch",
+    "contact_us_now": "Reach out to Us now and kickstart the growth of our business",
+    "dont_hesitate": "Don't hesitate to reach out! We are here to serve you and make your experience better",
+    "contact_us": "Contact Us",
+    "title": "Contact Us",
+    "content": "At MyCash, we are committed to providing a smooth and comfortable experience for our customers. Our customer service team is always ready to assist with any inquiries or resolve any issues you may face.",
+    "name": "Your Name",
+    "email": "Email",
+    "companyName": "Company Name (Optional)",
+    "phone": "Phone",
+    "yourMessage": "Your Message (Optional)",
+    "submit": "Submit",
+    "contactUs": "Contact Us Today at",
+    "phoneNumber": "Phone Number",
+    "address": "Address",
+    "addressDetails": "3273 Anas bin Malik, Al-Sahafa, 8369\nRiyadh - Saudi Arabia"
   },
   "footer": {
     "footer_title": "MyCash System is Designed for enhancing payments and sales management with professional standards and expertise",
